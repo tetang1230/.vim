@@ -1,4 +1,4 @@
 .vim
 ====
 
-vim plugins
+ vim plugins
