@@ -23,7 +23,7 @@ set t_Sb=^[[4%dm
 set t_Sf=^[[3%dm
 endif
 let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
-set tags="/home/chester/.vim/tags"
+"set tags="/home/chester/.vim/tags"
 map <F2> :NERDTreeToggle<CR>
 map <F3> :TlistToggle<CR>
 map <F4> t :NERDTreeMirror<CR>
@@ -53,3 +53,40 @@ if !exists('g:AutoComplPop_Behavior')
 endif
 set runtimepath+=$HOME/.vim/vim-php-manual
 autocmd BufNewFile,Bufread *.module,*.inc,*.php set keywordprg="help"
+
+
+"自动启动neocomplcache的命令： 
+let g:neocomplcache_enable_at_startup = 1
+
+"类似于AutoComplPop用法
+let g:neocomplcache_enable_auto_select = 1
+
+"禁止AutoComplPop
+"let g:NeoComplCache_DisableAutoComplete = 1
+
+"通过C-X,C-U打开匹配列表
+"let g:SuerTabDefaultCompletionType = '<C-X><C-U>'
+
+
+" neocompcache匹配字典
+" 可以添加更多字典
+" 比如css javascript 
+let g:neocomplcache_dictionary_filetype_lists = { 
+    \ 'default' : '', 
+    \ 'php' : $HOME.'/.vim/php_funclist.txt'
+\ }
+
+"<CR>: close popup and save indent.
+inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
+"<TAB>: completion. NO USE with snipmate
+"取消 <TAB> 的相关映射
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+"<C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><C-Y>  neocomplcache#close_popup()
+inoremap <expr><C-e>  neocomplcache#cancel_popup()
+"inoremap <expr><Enter>  pumvisible() ? neocomplcache#close_popup()."\<C-n>" : "\<Enter>"
+"赋予 <Enter> <C-Y> 的功能, <C-Y> 的功能是选择选项之后关闭弹出框
+inoremap <expr><Enter>  pumvisible() ? "\<C-Y>" : "\<Enter>"
+
