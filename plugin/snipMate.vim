@@ -10,6 +10,8 @@
 "                :helptags ~/.vim/doc
 "                :h snipMate.txt
 
+let g:snips_author = 'JiChao'
+
 if exists('loaded_snips') || &cp || version < 700
 	finish
 endif
