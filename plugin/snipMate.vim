@@ -9,6 +9,7 @@
 "                For more help see snipMate.txt; you can do this by using:
 "                :helptags ~/.vim/doc
 "                :h snipMate.txt
+let g:snips_author = 'JiChao'
 
 let g:snips_author = 'JiChao'
 
