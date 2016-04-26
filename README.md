@@ -7,7 +7,7 @@ Description
 neocomplcache is the abbreviation of "neo-completion with cache". It
 provides keyword completion system by maintaining a cache of keywords in the
 current buffer. neocomplcache could be customized easily and has a lot more
-features than the Vim's standard completion feature.
+features than the Vim's standard completion feature...
 
 Installation
 ============
