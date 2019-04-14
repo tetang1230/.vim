@@ -1,7 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/mls/mygit/bootstrap-3.3.4/grunt'
-let g:netrw_dirhist_2='/Users/mls/deepwiki/deepwiki-config'
-let g:netrw_dirhist_3='/Users/mls/deepwiki/deepwiki-docs-example'
-let g:netrw_dirhist_4='/Users/mls/deepwiki/deepwiki-config'
-let g:netrw_dirhist_5='/Users/mls/deepwiki/deepwiki-docs-example'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/chester/work/php-webim/vendor/matyhtf'
+let g:netrw_dirhist_2='/Users/chester/work/php-webim/client/apps'
+let g:netrw_dirhist_3='/Users/chester/work/node_hash/node_modules'
+let g:netrw_dirhist_4='/Users/chester/testc'
